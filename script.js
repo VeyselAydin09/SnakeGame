@@ -29,3 +29,16 @@ function main(currentTime) {
   update();
   draw();
 }
+window.requestAnimationFrame(main);
+
+function update() {
+  updateSnake();
+  updateFood();
+  checkDeath();
+}
+
+function draw() {
+  gameBoard.innerHTML = "";
+  drawSnake(gameBoard);
+  drawFood(gameBoard);
+}
